@@ -78,7 +78,7 @@ const RideOptionsCard = () => {
             <View style={tw`-ml-8`}>
               <Text style={tw`text-sm font-semibold`}>{title}</Text>
               <Text style={tw`text-xs`}>
-                {travelTimeInformation?.duration?.text}Travel Time
+                {travelTimeInformation?.duration?.text}Trav.Time
               </Text>
             </View>
             <Text style={tw`text-sm`}>
