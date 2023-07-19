@@ -13,8 +13,8 @@ import { useNavigation } from "@react-navigation/native";
 import { Image } from "react-native";
 import { useSelector } from "react-redux";
 import { selectTravelTimeInformation } from "../slices/navSlice";
-import "intl";
-import "intl/locale-data/jsonp/en";
+// import "intl";
+// import "intl/locale-data/jsonp/en";
 
 const data = [
   {
@@ -27,7 +27,7 @@ const data = [
     id: "Uber-LUX-789",
     title: "Uber LUX",
     multiplier: 1.75,
-    image: "https://links.papareact.com/7pf",
+    image: "http://links.papareact.com/7pf",
   },
   {
     id: "Uber-XL-456",
@@ -53,7 +53,7 @@ const RideOptionsCard = () => {
         >
           <Icon name="chevron-left" type="font-awesome" />
         </TouchableOpacity>
-        <Text style={tw`text-center py-5 text-xl`}>
+        <Text style={tw`text-center py-3 text-lg`}>
           Select a Ride -{travelTimeInformation?.distance?.text}
         </Text>
       </View>
@@ -69,7 +69,7 @@ const RideOptionsCard = () => {
             <Image
               style={{
                 width: 100,
-                height: 100,
+                height: 90,
                 resizeMode: "contain",
               }}
               source={{ uri: image }}
@@ -78,7 +78,7 @@ const RideOptionsCard = () => {
             <View style={tw`-ml-8`}>
               <Text style={tw`text-sm font-semibold`}>{title}</Text>
               <Text style={tw`text-xs`}>
-                {travelTimeInformation?.duration?.text}Trav.Time
+                {travelTimeInformation?.duration?.text}.Travel Time
               </Text>
             </View>
             <Text style={tw`text-sm`}>
@@ -90,7 +90,7 @@ const RideOptionsCard = () => {
                   SURGE_CHARGE_RATE *
                   multiplier) /
                   100
-              )}
+              )}{""}
             </Text>
           </TouchableOpacity>
         )}
@@ -101,7 +101,7 @@ const RideOptionsCard = () => {
           disabled={!selected}
           style={tw`bg-black py-3 m-3 ${!selected && "bg-gray-300"}`}
         >
-          <Text style={tw`text-center text-white text-xl`}>
+          <Text style={tw`text-center text-white text-lg`}>
             Choose {selected?.title}
           </Text>
         </TouchableOpacity>

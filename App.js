@@ -8,6 +8,9 @@ import { store } from "./store";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+// import { setupURLPolyfill } from "react-native-url-polyfill";
+
+// setupURLPolyfill({});
 
 export default function App() {
   const Stack = createStackNavigator();

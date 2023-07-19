@@ -21,7 +21,7 @@ const NavigateCard = () => {
 
   return (
     <SafeAreaView style={tw`bg-white flex-1`}>
-      <Text style={tw`text-center py-4 text-xl`}>Good Morning, Efranor</Text>
+      <Text style={tw`text-center py-4 text-sm font-semibold`}>Good Morning, Efranor</Text>
       <View style={tw`border-t border-gray-200 flex-shrink`}>
         <View>
           <GooglePlacesAutocomplete
@@ -67,7 +67,7 @@ const NavigateCard = () => {
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={tw`flex flex-row justify-between w-24 px-4 py-3 rounded-full`}
+          style={tw`flex flex-row justify-between w-24 bg-gray-300 px-4 py-3 rounded-full`}
         >
           <Icon
             name="fast-food-outline"
@@ -94,7 +94,7 @@ const toInputBoxStyles = StyleSheet.create({
   textInput: {
     backgroundColor: "#DDDDDF",
     borderRadius: 0,
-    fontSize: 18,
+    fontSize: 16,
   },
   textInputContainer: {
     paddingHorizontal: 20,
